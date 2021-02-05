@@ -15,6 +15,7 @@
 		C0DA47A125CDA25D00E2041B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0DA479F25CDA25D00E2041B /* LaunchScreen.storyboard */; };
 		C0DA47AC25CDA48D00E2041B /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA47AB25CDA48D00E2041B /* MapViewModel.swift */; };
 		C0DA47AF25CDA68400E2041B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA47AE25CDA68400E2041B /* Coordinator.swift */; };
+		C0DA47B425CDAD8300E2041B /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA47B325CDAD8300E2041B /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C0DA47A225CDA25D00E2041B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0DA47AB25CDA48D00E2041B /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		C0DA47AE25CDA68400E2041B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		C0DA47B325CDAD8300E2041B /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				C0DA479425CDA25B00E2041B /* AppDelegate.swift */,
 				C0DA479625CDA25C00E2041B /* SceneDelegate.swift */,
+				C0DA47B325CDAD8300E2041B /* LocationManager.swift */,
 				C0DA47B125CDA69100E2041B /* Coordinator */,
 				C0DA47AB25CDA48D00E2041B /* MapViewModel.swift */,
 				C0DA47A925CDA29100E2041B /* Views */,
@@ -169,6 +172,7 @@
 			files = (
 				C0DA479525CDA25C00E2041B /* AppDelegate.swift in Sources */,
 				C0DA479725CDA25C00E2041B /* SceneDelegate.swift in Sources */,
+				C0DA47B425CDAD8300E2041B /* LocationManager.swift in Sources */,
 				C0DA47AF25CDA68400E2041B /* Coordinator.swift in Sources */,
 				C0DA479925CDA25C00E2041B /* ContentView.swift in Sources */,
 				C0DA47AC25CDA48D00E2041B /* MapViewModel.swift in Sources */,

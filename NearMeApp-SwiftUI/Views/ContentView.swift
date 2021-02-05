@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject private var locationManager = LocationManager()
+    
     var body: some View {
         MapViewModel()
     }
