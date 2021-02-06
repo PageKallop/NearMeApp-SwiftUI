@@ -13,6 +13,7 @@ struct ContentView: View {
     @ObservedObject private var locationManager = LocationManager()
     
     @State private var search: String = ""
+    @State private var landmarks = [Landmark]()
     
     private func getNearByLandmarks() {
         
@@ -30,8 +31,8 @@ struct ContentView: View {
             }
             
             let mapItems = responce.mapItems
-            mapItems.map {
-                print($0.placemark)
+            self.landmarks = mapItems.map {
+                Landmark(placemark: $0.placemark)
             }
             
         }
@@ -40,7 +41,7 @@ struct ContentView: View {
     var body: some View {
         
         ZStack(alignment: .top) {
-        MapViewModel()
+            MapViewModel(landmarks: self.landmarks)
             TextField("Search", text: self.$search, onEditingChanged: {_ in }) {
                 getNearByLandmarks()
             }.textFieldStyle(RoundedBorderTextFieldStyle())
