@@ -10,10 +10,11 @@ import MapKit
 
 struct ContentView: View {
     
-    @ObservedObject private var locationManager = LocationManager()
+    private var locationManager = LocationManager()
     
     @State private var search: String = ""
     @State private var landmarks = [Landmark]()
+    @State private var tapped: Bool = false
     
     private func getNearByLandmarks() {
         
@@ -39,9 +40,11 @@ struct ContentView: View {
     }
     
     func calculateOffset() -> CGFloat {
-        if self.landmarks.count > 0 {
+        if self.landmarks.count > 0 && !self.tapped{
             
             return UIScreen.main.bounds.size.height - UIScreen.main.bounds.size.height / 4
+        } else if self.tapped {
+            return 100
         } else {
             return UIScreen.main.bounds.size.height
         }
@@ -58,8 +61,12 @@ struct ContentView: View {
             .padding()
             .offset(y: 44)
             
-            PlaceListView(landmarks: self.landmarks)
-                .offset(y: calculateOffset())
+            PlaceListView(landmarks: self.landmarks) {
+                
+                self.tapped.toggle()
+            }.animation(.spring())
+            .offset(y: calculateOffset())
+                
         }
     }
 }
