@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C05F9D2A25D07AA200C6DA17 /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F9D2925D07AA200C6DA17 /* PlaceListView.swift */; };
 		C0A7601025CF41E100FBDF08 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A7600F25CF41E100FBDF08 /* Landmark.swift */; };
 		C0A7601525CF432600FBDF08 /* LandmarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A7601425CF432600FBDF08 /* LandmarkAnnotation.swift */; };
 		C0DA479525CDA25C00E2041B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA479425CDA25B00E2041B /* AppDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C05F9D2925D07AA200C6DA17 /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
 		C0A7600F25CF41E100FBDF08 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
 		C0A7601425CF432600FBDF08 /* LandmarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkAnnotation.swift; sourceTree = "<group>"; };
 		C0DA479125CDA25B00E2041B /* NearMeApp-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NearMeApp-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				C0DA479825CDA25C00E2041B /* ContentView.swift */,
+				C05F9D2925D07AA200C6DA17 /* PlaceListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				C0A7601525CF432600FBDF08 /* LandmarkAnnotation.swift in Sources */,
 				C0A7601025CF41E100FBDF08 /* Landmark.swift in Sources */,
 				C0DA479525CDA25C00E2041B /* AppDelegate.swift in Sources */,
+				C05F9D2A25D07AA200C6DA17 /* PlaceListView.swift in Sources */,
 				C0DA479725CDA25C00E2041B /* SceneDelegate.swift in Sources */,
 				C0DA47B425CDAD8300E2041B /* LocationManager.swift in Sources */,
 				C0DA47AF25CDA68400E2041B /* Coordinator.swift in Sources */,

@@ -17,15 +17,15 @@ struct Landmark {
     }
     
     var name: String {
-        self.placemark.name ?? ""
+        return self.placemark.name ?? ""
     }
     
     var title: String {
-        self.placemark.title ?? ""
+        return self.placemark.title ?? ""
     }
     
     var coordinate: CLLocationCoordinate2D {
         
-        self.placemark.coordinate
+        return self.placemark.coordinate
     }
 }

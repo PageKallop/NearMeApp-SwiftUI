@@ -31,10 +31,19 @@ struct ContentView: View {
             }
             
             let mapItems = responce.mapItems
-            self.landmarks = mapItems.map {
-                Landmark(placemark: $0.placemark)
+           self.landmarks = mapItems.map {
+              Landmark(placemark: $0.placemark)
             }
             
+        }
+    }
+    
+    func calculateOffset() -> CGFloat {
+        if self.landmarks.count > 0 {
+            
+            return UIScreen.main.bounds.size.height - UIScreen.main.bounds.size.height / 4
+        } else {
+            return UIScreen.main.bounds.size.height
         }
     }
     
@@ -42,11 +51,15 @@ struct ContentView: View {
         
         ZStack(alignment: .top) {
             MapViewModel(landmarks: self.landmarks)
-            TextField("Search", text: self.$search, onEditingChanged: {_ in }) {
-                getNearByLandmarks()
+            TextField("Search", text: self.$search, onEditingChanged: { _ in }) {
+                
+                self.getNearByLandmarks()
             }.textFieldStyle(RoundedBorderTextFieldStyle())
             .padding()
             .offset(y: 44)
+            
+            PlaceListView(landmarks: self.landmarks)
+                .offset(y: calculateOffset())
         }
     }
 }
